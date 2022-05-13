@@ -15,6 +15,7 @@ document.addEventListener('click', async()=>{
         inputString.innerHTML = ''
         triggerCountdown()
         document.querySelectorAll('.alphabetic-key span').forEach(elem => elem.style.opacity = '1')
+        keysAllowed = true
     }
 })
 
@@ -22,9 +23,9 @@ document.addEventListener('keydown', (e)=>{
     if(keysAllowed && sample.includes(e.key.toLowerCase()) && inputString.innerHTML.length!=6 && !e.repeat){
         inputString.innerHTML = inputString.innerHTML + e.key.toUpperCase()
         alphaKeys[sample.indexOf(e.key.toLowerCase())].querySelector('img').style.filter = 'brightness (50%)'
-        new Audio('keyPress.mp3').play()
+        new Audio('./mp3/keyPress.mp3').play()
     }
-    else if(e.key=='Escape' && kaysAllowed){
+    else if(e.key=='Escape' && keysAllowed){
         gameOver()
     }
 })

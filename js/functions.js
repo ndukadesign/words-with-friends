@@ -36,10 +36,12 @@ function triggerCountdown (){
 }
 
 function gameOver(){
-    bgmusic.pause()
+    bgMusic.pause()
     new Audio('./mp3/game-over.wav').play()
     inputString.innerHTML = ''
+    blocks().forEach(block => block.style.transform = 'scale(1)')
     clearInterval(countdownID)
+    keysAllowed = false
 }
 
 
