@@ -2,7 +2,7 @@
 
 ## What's the game about?
 
-Welcome to Words-with-Friends! A new word a day helps the brain play. Let's see if how many words you can solve before time runs out. Don't worry the hints will be sure to jog your memory.  Enjoy 😎.
+Welcome to Words-with-Friends! A new word a day helps the brain play. Let's see how many words you can solve before time runs out. Don't worry the hints will be sure to jog your memory.  Enjoy 😎.
 
 ## Tech stack
 
@@ -11,7 +11,7 @@ Welcome to Words-with-Friends! A new word a day helps the brain play. Let's see 
 
 ## Wireframes
 
-![Game Wireframe](words-with-friends.png)
+![Game Wireframe](img/words-with-friends.png)
 
 ## MVP Goals
 
