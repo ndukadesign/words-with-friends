@@ -1,4 +1,4 @@
-# Words-with-Friends - GAME PITCH [P L A Y  N O W](https://ndukadesign.github.io/words-with-friends/)
+# Words-with-Friends - GAME PITCH        [P L A Y  N O W](https://ndukadesign.github.io/words-with-friends/)
 
 
 ## What's the game about?
