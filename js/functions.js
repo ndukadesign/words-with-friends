@@ -28,7 +28,7 @@ function blocks(){
 
 function triggerCountdown (){
     clearInterval(countdownID)
-    countdown.innerHTML = '300'
+    countdown.innerHTML = '130'
     countdownID = setInterval(()=>{
         countdown.innerHTML = Number(countdown.innerHTML) - 1
         countdown.innerHTML == '0' && gameOver()
