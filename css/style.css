@@ -42,6 +42,9 @@ body {
     font-size:25px;
     transition: transform 1s cubic-bezier(0.175, 0.895, 0.32, 1.275);
 }
+#reset {
+    gap: 1rem;
+}
 
 #info {
     height:175px;

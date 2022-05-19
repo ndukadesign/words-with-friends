@@ -7,10 +7,10 @@ window.addEventListener('load', ()=>{
     body.style.backdropFilter = 'blur(0px)'
 })
 
-document.addEventListener('click', async()=>{
+document.querySelector('#input-string').addEventListener('click', async()=>{
     if(!gameStarted){
         gameStarted = true
-        await new Promise(resolve => setTimeout(resolve,500))
+        // await new Promise(resolve => setTimeout(resolve,500))
         bgMusic.play()
         inputString.innerHTML = ''
         triggerCountdown()
@@ -19,7 +19,9 @@ document.addEventListener('click', async()=>{
     }
 })
 
+
 document.addEventListener('keydown', (e)=>{
+    e.preventDefault()
     if(keysAllowed && sample.includes(e.key.toLowerCase()) && inputString.innerHTML.length!=6 && !e.repeat){
         inputString.innerHTML = inputString.innerHTML + e.key.toUpperCase()
         alphaKeys[sample.indexOf(e.key.toLowerCase())].querySelector('img').style.filter = 'brightness (50%)'
@@ -92,4 +94,12 @@ document.addEventListener('keyup',(e)=>{
             backspaceKeyImg.style.filter = 'brightness(100%)'
         },100)
     }
+})
+
+
+console.log(document.getElementById('reset-button'))
+document.getElementById('reset-button').addEventListener("click", function () {
+  gameReset()
+  document.getElementById('reset-button').blur()
+  console.log("reset?")
 })

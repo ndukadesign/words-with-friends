@@ -28,11 +28,23 @@ function blocks(){
 
 function triggerCountdown (){
     clearInterval(countdownID)
-    countdown.innerHTML = '130'
+    countdown.innerHTML = '143'
     countdownID = setInterval(()=>{
         countdown.innerHTML = Number(countdown.innerHTML) - 1
         countdown.innerHTML == '0' && gameOver()
     },1000)
+}
+const gameReset = function (){
+    console.log ('resetgame')
+    container.innerText = ""
+    countdown.innerHTML = '143'
+    gameStarted = false
+    keysAllowed = ''
+    document.querySelectorAll('.alphabetic-key span').forEach(elem => elem.style.opacity = '0')
+    bgMusic.pause()
+    clearInterval(countdownID)
+    document.querySelector('#input-string').innerText = 'CLICK TO START'
+    placeResults()
 }
 
 function gameOver(){
@@ -42,8 +54,10 @@ function gameOver(){
     blocks().forEach(block => block.style.transform = 'scale(1)')
     clearInterval(countdownID)
     keysAllowed = false
+    reset = true
 }
 
+// window.location.reload();
 
 function placeResult(result,direction,X,Y){
     let html = ''

@@ -8,6 +8,7 @@ let bgNum = 2
 let skips = 0
 
 
+
 let body = document.querySelector('body')
 let container = document.querySelector('#container')
 let cells = document.querySelectorAll('.cell')
@@ -18,6 +19,7 @@ let spaceKeyImg = document.querySelector('#space-key').querySelector('img')
 let scoreText = document.querySelector('#scoreText')
 let scoreValue = document.querySelector('#scoreValue')
 let countdown = document.querySelector('#countdown')
+let resetBtn = document.querySelector('#reset-button')
 
 let dictionary = [ 
     "a",
